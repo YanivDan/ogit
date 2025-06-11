@@ -85,7 +85,7 @@ ogit --model gemma:2b --copy
 1. Get `git diff`
 2. Send diff to Ollama
 3. Generate commit message
-4. (Optionally) edit message in `$EDITOR`
+4. (Optionally) edit message in `$EDITOR` (default is nano)
 5. (Optionally) auto `add`, `commit`, and `push`
 
 ---
