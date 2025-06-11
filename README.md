@@ -24,7 +24,7 @@
    ```
 2. **Run the setup script (recommended):**
    ```zsh
-   zsh setup_ogit.sh
+   source setup_ogit.sh
    ```
    This will create a virtual environment, install dependencies, and set up the CLI tool for you.
 
