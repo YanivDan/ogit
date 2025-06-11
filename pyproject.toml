@@ -11,10 +11,11 @@ authors = [
 ]
 dependencies = [
     "requests",
-    "gitpython"
+    "gitpython",
+    "pyperclip"
 ]
 readme = "README.md"
 requires-python = ">=3.7"
 
 [project.scripts]
-ogit = "src.main:cli_entrypoint"
+ogit = "ogit.main:cli_entrypoint"
