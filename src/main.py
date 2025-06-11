@@ -74,5 +74,6 @@ def cli_entrypoint():
     args = parser.parse_args()
     main(model=args.model, list_models=args.list_models)
 
+# Only run the CLI if this file is executed directly (not on import)
 if __name__ == "__main__":
     cli_entrypoint()
