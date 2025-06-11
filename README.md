@@ -1,10 +1,11 @@
 # ogit — AI-Powered Git Commit Message Generator
 
-**ogit** is a lightweight CLI tool that uses [Ollama](https://ollama.com/) to generate meaningful, concise Git commit messages based on your code changes.
+**ogit** is a terminal-native Git assistant powered by local AI.
 
-Make your commit history consistent and professional — effortlessly.
+It lets you write, explain, and undo commits using natural language - entirely offline using Ollama.
 
----
+No cloud. No API keys. Just smarter Git from your terminal.
+
 
 ## Features
 
