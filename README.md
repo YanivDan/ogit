@@ -1,23 +1,11 @@
 # ogit - A Git Commit Message Generator using Ollama
 
 ## Overview
-ogit is a Python tool that communicates with the Ollama service to generate meaningful git commit messages based on the current git diffs. This project aims to streamline the commit process by providing users with well-structured commit messages, enhancing the clarity and quality of version control history.
+**ogit** is a Python CLI tool that uses Ollama AI to instantly generate clear, high-quality git commit messages from your code changes. Make your commit history concise and professional—effortlessly.
 
 ## Features
 - Generates commit messages from git diffs using AI (Ollama).
 - Simple command-line interface.
-
-## Project Structure
-```
-ogit/
-├── src/
-│   ├── main.py          # Entry point of the application
-│   ├── ollama_client.py # Handles communication with the Ollama service
-│   ├── git_utils.py     # Utility function for retrieving git diff
-│   └── __init__.py      # Marks the directory as a Python package
-├── requirements.txt      # Lists project dependencies
-└── README.md             # Project documentation
-```
 
 ## Installation
 1. Clone the repository:
