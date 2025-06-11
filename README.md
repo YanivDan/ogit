@@ -114,4 +114,4 @@ Bug reports and pull requests are welcome on GitHub. Please file an issue or ope
 
 ## License
 
-MIT License — see [`LICENSE`](./LICENSE) for details.
+MIT License.
