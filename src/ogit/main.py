@@ -64,7 +64,7 @@ def check_git_installed():
 def main(model=None, list_models=False, set_default_model=False, copy_to_clipboard=False):
     if not check_git_installed():
         print("[ERROR] Git is not installed or not in your PATH.")
-        print("➡️  Please install Git from https://git-scm.com/downloads and try again.")
+        print("Please install Git from https://git-scm.com/downloads and try again.")
         sys.exit(1)
 
     if not check_ollama_running():
