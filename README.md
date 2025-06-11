@@ -90,7 +90,7 @@ ogit --model gemma:2b --copy
 
 ---
 
-## 🧹 Uninstall
+## Uninstall
 
 To remove `ogit` installed via `pipx`:
 
