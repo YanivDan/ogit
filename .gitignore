@@ -34,6 +34,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+ogit-venv/
 
 # PyInstaller
 *.manifest

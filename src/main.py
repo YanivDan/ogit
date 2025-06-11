@@ -1,10 +1,28 @@
 import argparse
 import sys
 import subprocess
+import requests
 from ollama_client import OllamaClient, list_ollama_models
 from git_utils import get_git_diff
 
+def check_ollama_running():
+    """
+    Check if Ollama is running locally.
+    """
+    try:
+        response = requests.get("http://localhost:11434/api/tags", timeout=2)
+        if response.status_code == 200:
+            return True
+    except Exception:
+        pass
+    return False
+
 def main(model=None, list_models=False):
+    # Check if Ollama is running
+    if not check_ollama_running():
+        print("[ERROR] Ollama is not running or not installed. Please start Ollama (see https://ollama.com/) and try again.")
+        sys.exit(1)
+
     # Retrieve the current git diff
     git_diff = get_git_diff()
 

@@ -1,5 +1,15 @@
 # ogit - A Git Commit Message Generator using Ollama
 
+## Prerequisites
+
+- **Python 3.7+** must be installed. You can check your version with:
+  ```sh
+  python3 --version
+  ```
+- **Ollama** must be installed and running locally. See [Ollama documentation](https://ollama.com/) for installation instructions.
+
+---
+
 ## Overview
 **ogit** is a Python CLI tool that uses Ollama AI to instantly generate clear, high-quality git commit messages from your code changes. Make your commit history concise and professional—effortlessly.
 
@@ -10,7 +20,7 @@
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/YanivDan/ogit.git
    cd ogit
    ```
 2. Install the required dependencies:
