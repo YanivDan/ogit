@@ -15,40 +15,51 @@
 
 ## Features
 - Generates commit messages from git diffs using AI (Ollama).
-- Simple command-line interface.
 
-## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/YanivDan/ogit.git
+## Installation & Quick Start
+1. **Clone the repo:**
+   ```zsh
+   git clone <your-repo-url>
    cd ogit
    ```
-2. Install the required dependencies:
-   ```sh
-   pip install -r requirements.txt
+2. **Run the setup script (recommended):**
+   ```zsh
+   zsh setup_ogit.sh
    ```
-   Or, to create a virtual environment and install:
-   ```sh
-   python -m venv .venv
+   This will create a virtual environment, install dependencies, and set up the CLI tool for you.
+
+   Or, install manually:
+   ```zsh
+   python3 -m venv .venv
    source .venv/bin/activate
-   pip install -r requirements.txt
+   pip install -e .
+   ```
+3. **Activate the environment (if not already active):**
+   ```zsh
+   source .venv/bin/activate
    ```
 
 ## CLI Usage
-
-### Generate a Commit Message with AI
 - Generate a commit message using the current git diff:
-  ```sh
-  ogit commit-msg [--model <model>]
+  ```zsh
+  ogit --model <model>
   ```
 - List available Ollama models:
-  ```sh
-  ogit commit-msg --list-models
+  ```zsh
+  ogit --list-models
+  ```
+- Show help:
+  ```zsh
+  ogit --help
   ```
 
-For more details on each command and its options, run:
-```sh
-ogit commit-msg --help
+- Run inside a git repository with changes.
+- The tool will generate a commit message and can auto-commit/push for you.
+
+## Uninstall
+To remove the venv and all installed files:
+```zsh
+rm -rf .venv
 ```
 
 ## Contributing
