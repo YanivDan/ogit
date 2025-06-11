@@ -24,19 +24,15 @@
    ```
 2. **Run the setup script (recommended):**
    ```zsh
-   source setup_ogit.sh
+   brew install pipx 
+   pipx ensurepath
    ```
-   This will create a virtual environment, install dependencies, and set up the CLI tool for you.
+   To install widely in the system run
+   
+   **from the root directory of the project**:
 
-   Or, install manually:
    ```zsh
-   python3 -m venv .venv
-   source .venv/bin/activate
-   pip install -e .
-   ```
-3. **Activate the environment (if not already active):**
-   ```zsh
-   source .venv/bin/activate
+   pipx install --editable .
    ```
 
 ## CLI Usage
@@ -59,7 +55,7 @@
 ## Uninstall
 To remove the venv and all installed files:
 ```zsh
-rm -rf .venv
+pipx uninstall ogit
 ```
 
 ## Contributing
