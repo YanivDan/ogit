@@ -19,7 +19,7 @@
 ## Installation & Quick Start
 1. **Clone the repo:**
    ```zsh
-   git clone <your-repo-url>
+   git clone https://github.com/YanivDan/ogit.git
    cd ogit
    ```
 2. **Run the setup script (recommended):**
