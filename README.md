@@ -28,7 +28,7 @@ cd ogit
 
 ### 2. Install via `pipx` (recommended)
 
-If you don’t have `pipx` yet:
+If you don't have `pipx` yet:
 
 ```zsh
 brew install pipx
