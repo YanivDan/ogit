@@ -80,10 +80,19 @@ def main(model=None, list_models=False, set_default_model=False, copy_to_clipboa
 
     models = list_ollama_models()
 
-    if set_default_model or not load_default_model() or load_default_model() not in models:
+    if set_default_model:
         model = prompt_for_model()
-    elif model is None:
-        model = load_default_model()
+    elif model is not None:
+        # use model provided via CLI option
+        if model not in models:
+            print(f"[WARN] Specified model '{model}' not found in available models.")
+        # nothing else to do, CLI-specified model overrides defaults
+    else:
+        default_model = load_default_model()
+        if not default_model or default_model not in models:
+            model = prompt_for_model()
+        else:
+            model = default_model
 
     git_diff = get_git_diff()
     if not git_diff:
