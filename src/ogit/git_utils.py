@@ -12,5 +12,5 @@ def get_git_diff():
         return diff
     except subprocess.CalledProcessError as e:
         print("[ERROR] Failed to retrieve git diff.")
-        print("[!] Make sure you're in a git repo with staged changes.")
+        print("[!] Make sure you're in a git repo with changes.")
         return ""
