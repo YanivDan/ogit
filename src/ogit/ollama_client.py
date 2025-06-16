@@ -7,21 +7,21 @@ class OllamaClient:
 
     def send_request(self, payload):
         try:
-            response = requests.post(self.endpoint, json=payload, stream=True)
-            response.raise_for_status()
+            with requests.post(self.endpoint, json=payload, stream=True) as response:
+                response.raise_for_status()
 
-            full_response = ""
-            for line in response.iter_lines(decode_unicode=True):
-                if not line.strip():
-                    continue
-                try:
-                    part = json.loads(line)
-                    full_response += part.get("response", "")
-                except json.JSONDecodeError as e:
-                    print(f"[WARN] Skipped malformed line: {line}")
-                    continue
+                full_response = ""
+                for line in response.iter_lines(decode_unicode=True):
+                    if not line.strip():
+                        continue
+                    try:
+                        part = json.loads(line)
+                        full_response += part.get("response", "")
+                    except json.JSONDecodeError:
+                        print(f"[WARN] Skipped malformed line: {line}")
+                        continue
 
-            return {"response": full_response.strip()}
+                return {"response": full_response.strip()}
 
         except requests.exceptions.RequestException as e:
             print(f"[ERROR] Failed to reach Ollama API: {e}")
