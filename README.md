@@ -1,4 +1,4 @@
-# ogit — AI-Powered Git Commit Message Generator
+# ogit - AI-Powered Git Commit Message Generator
 
 **ogit** is a terminal-native Git assistant powered by local AI.
 
@@ -32,7 +32,7 @@ cd ogit
 
 ### 2. Install via `pipx` (recommended)
 
-If you don't have `pipx` yet:
+If you don’t have `pipx` yet:
 
 ```zsh
 brew install pipx
